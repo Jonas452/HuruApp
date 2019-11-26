@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Huru App</string>
+    <string name="app_name" translatable="false">Huru App</string>
+
+    <string name="title_main">Inventários por Data</string>
 </resources>
