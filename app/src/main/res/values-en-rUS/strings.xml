@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">Huru App</string>
     <string name="title_main">Inventories by Date</string>
+    <string name="data_loading_msg">"No connection to the Internet. Searching for the data in offline mode. "</string>
 </resources>

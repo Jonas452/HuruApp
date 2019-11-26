@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Huru App</string>
     <string name="title_main">Inventários por Data</string>
+    <string name="data_loading_msg">Sem conexão com Internet. Buscando dados no modo offline.</string>
 </resources>
