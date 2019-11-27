@@ -1,9 +1,7 @@
-package com.example.huruapp.DAOs
+package com.example.huruapp.dao
 
-import android.util.Log
 import androidx.room.*
 import com.example.huruapp.model.Inventory
-import org.json.JSONArray
 
 @Dao
 
