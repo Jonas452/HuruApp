@@ -30,12 +30,16 @@ fun formatDate(date: String): String {
     return outputText
 }
 
-fun loadImage(url: String): Bitmap = runBlocking {
-    val bmp: Bitmap
+fun loadImage(url: String): Bitmap? = runBlocking {
+    val bmp: Bitmap?
     val funAsync = GlobalScope.async {
-        val url = URL(url)
-        val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
-        return@async bmp
+        try {
+            val url = URL(url)
+            val bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream())
+            return@async bmp
+        }catch (e: Exception) {
+            return@async null
+        }
     }
 
     bmp = funAsync.await()

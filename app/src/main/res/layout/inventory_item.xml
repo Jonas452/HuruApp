@@ -9,6 +9,7 @@
         android:id="@+id/image"
         android:layout_gravity="center_vertical|center"
         android:layout_width="100dp"
+        android:src="@drawable/no_image"
         android:layout_height="match_parent" />
 
     <LinearLayout

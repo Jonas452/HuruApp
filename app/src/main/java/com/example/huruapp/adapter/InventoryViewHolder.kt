@@ -1,6 +1,5 @@
 package com.example.huruapp.adapter
 
-import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -10,13 +9,6 @@ import com.example.huruapp.R
 import com.example.huruapp.model.Inventory
 import com.example.huruapp.util.formatDate
 import com.example.huruapp.util.loadImage
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import java.net.URL
-import java.text.DateFormat
-import java.text.SimpleDateFormat
-import java.util.*
-
 
 class InventoryViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
     RecyclerView.ViewHolder(inflater.inflate(R.layout.inventory_item, parent, false)) {
@@ -40,7 +32,12 @@ class InventoryViewHolder(inflater: LayoutInflater, parent: ViewGroup) :
         mCodeView?.text =  "$text $code"
         mStatusView?.text = inventory.status
         mDateView?.text = formatDate(inventory.date_created)
-        mImageView?.setImageBitmap(loadImage(inventory.image))
+
+        val bmp = loadImage(inventory.image)
+
+        if(bmp != null)
+            mImageView?.setImageBitmap(bmp)
+
     }
 
 }
